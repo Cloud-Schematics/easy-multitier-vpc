@@ -4,7 +4,7 @@ This template allows users to easily create a VPC with three tiers, each tier ha
 
 ## Default Configuration
 
-![ez vpc](./.docs/mt-vpc.png)
+![ez vpc](./.docs/mt-vpc-2.png)
 
 The defaults of this module can be [overridden](#overriding-variables) with JSON to allow for a fully cusomizable VPC environment.
 
