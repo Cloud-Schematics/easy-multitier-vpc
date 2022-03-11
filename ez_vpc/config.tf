@@ -145,16 +145,16 @@ locals {
   acls = [
     for tier in var.tier_names :
     {
-      name              = "${tier}-acl"
-      rules             = tier == "management" ? distinct(
+      name = "${tier}-acl"
+      rules = tier == "management" ? distinct(
         flatten([
-          for allow_rules in var.tier_names:
+          for allow_rules in var.tier_names :
           module.dynamic_acl_allow_rules[allow_rules].rules
         ])
-      ) : distinct(
+        ) : distinct(
         flatten([
-          module.dynamic_acl_allow_rules[tier].rules
-
+          for allow_rules in var.tier_names :
+          module.dynamic_acl_allow_rules[allow_rules].rules if allow_rules == tier || allow_rules == "management"
         ])
       )
       add_cluster_rules = contains(var.add_cluster_rules, tier)

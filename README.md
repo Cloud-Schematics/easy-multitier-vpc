@@ -27,10 +27,11 @@ resource_group          | string       | Name of existing resource group where a
 tags                    | list(string) | List of tags to apply to resources created by this module.                                                                                |           | `["ez-vpc", "multitier-vpc"]`
 tier_names              | list(string) | Name of each tier in the VPC. Each tier will be created with one subnet in each zone.                                                     |           | `["management", "development", "production"]`
 use_public_gateways     | list(string) | List of subnet tiers to attach public gateways. A public gateway will be created in each zone if any VPC is in this list.                 |           | `["production"]`
-allow_inbound_traffic   | list(string) | Create a rule in each tier in this list to allow all inbound traffic.                                                                     |           | `["production"]`
+allow_inbound_traffic   | list(string) | Create a rule in each tier in this list to allow all inbound traffic.                                                                     |           | `[]`
 add_cluster_rules       | list(string) | Create a rule in each tier in this list to allow rules to allow the creation of IBM managed clusters.                                     |           | `["production", "workload"]`
 classic_access          | bool         | Add the ability to access classic infrastructure from your VPC.                                                                           |           | `false`
 override_json           | string       | Override any values with JSON to create a completely custom network. All quotation marks must be correctly escaped.                       |           | `"{}"`
+
 ---
 
 ## VPC and Subnets
