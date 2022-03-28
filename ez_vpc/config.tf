@@ -96,6 +96,7 @@ locals {
           acl_name       = "${tier}-acl"
         }
       ]
+
     }
     ##############################################################################
 
@@ -114,6 +115,26 @@ locals {
         }
       ])
     }
+
+    network_acls = [
+      for tier in var.tier_names :
+      {
+        name = "${tier}-acl"
+        rules = tier == "management" ? distinct(
+          flatten([
+            for allow_rules in var.tier_names :
+            module.dynamic_acl_allow_rules[allow_rules].rules
+          ])
+          ) : distinct(
+          flatten([
+            for allow_rules in var.tier_names :
+            module.dynamic_acl_allow_rules[allow_rules].rules if allow_rules == tier || allow_rules == "management"
+          ])
+        )
+        add_cluster_rules = contains(var.add_cluster_rules, tier)
+      }
+    ]
+
     ##############################################################################
 
     ##############################################################################
@@ -139,28 +160,33 @@ locals {
     ##############################################################################
   }
 
-  ##############################################################################
-  # Create ACLS
-  ##############################################################################
-  acls = [
-    for tier in var.tier_names :
-    {
-      name = "${tier}-acl"
-      rules = tier == "management" ? distinct(
-        flatten([
-          for allow_rules in var.tier_names :
-          module.dynamic_acl_allow_rules[allow_rules].rules
-        ])
-        ) : distinct(
-        flatten([
-          for allow_rules in var.tier_names :
-          module.dynamic_acl_allow_rules[allow_rules].rules if allow_rules == tier || allow_rules == "management"
-        ])
-      )
-      add_cluster_rules = contains(var.add_cluster_rules, tier)
-    }
-  ]
-  ##############################################################################
+  env = {
+    prefix                      = lookup(local.override, "prefix", var.prefix)
+    vpc_name                    = lookup(local.override, "vpc_name", local.config.vpc_name)
+    classic_access              = lookup(local.override, "classic_access", var.classic_access)
+    network_acls                = lookup(local.override, "network_acls", local.config.network_acls)
+    use_public_gateways         = lookup(local.override, "use_public_gateways", local.config.use_public_gateways)
+    subnets                     = lookup(local.override, "subnets", local.config.subnets)
+    use_manual_address_prefixes = lookup(local.override, "use_manual_address_prefixes", null)
+    default_network_acl_name    = lookup(local.override, "default_network_acl_name", null)
+    default_security_group_name = lookup(local.override, "default_security_group_name", null)
+    default_routing_table_name  = lookup(local.override, "default_routing_table_name", null)
+    address_prefixes            = lookup(local.override, "address_prefixes", null)
+    routes                      = lookup(local.override, "routes", [])
+    vpn_gateways                = lookup(local.override, "vpn_gateways", [])
+  }
+
+  string = "\"${jsonencode(local.env)}\""
+}
+
+##############################################################################
+
+##############################################################################
+# Convert Environment to escaped readable string
+##############################################################################
+
+data "external" "format_output" {
+  program = ["python3", "${path.module}/scripts/output.py", local.string]
 }
 
 ##############################################################################
