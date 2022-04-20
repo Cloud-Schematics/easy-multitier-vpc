@@ -11,7 +11,7 @@ variable "ibmcloud_api_key" {
 variable "prefix" {
   description = "A unique identifier for resources. Must begin with a letter. This prefix will be prepended to any resources provisioned by this template."
   type        = string
-  default     = "ez-multizone"
+  default     = "ez-multitier"
 
   validation {
     error_message = "Prefix must begin and end with a letter and contain only letters, numbers, and - characters."
@@ -102,7 +102,7 @@ variable "classic_access" {
 variable "override" {
   description = "Override any values with `override.json` JSON to create a completely custom network."
   type        = bool
-  default     = false
+  default     = true
 }
 
 ##############################################################################

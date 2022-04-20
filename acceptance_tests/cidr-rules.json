@@ -1,0 +1,576 @@
+{
+  "development": [
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-1",
+      "source": "10.10.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.10.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-2",
+      "source": "10.20.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.20.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-3",
+      "source": "10.30.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.30.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-development-zone-1",
+      "source": "10.40.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.40.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-development-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-development-zone-2",
+      "source": "10.50.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.50.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-development-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-development-zone-3",
+      "source": "10.60.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.60.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-development-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    }
+  ], 
+  "management" :  [
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-1",
+      "source": "10.10.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.10.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-2",
+      "source": "10.20.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.20.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-3",
+      "source": "10.30.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.30.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-development-zone-1",
+      "source": "10.40.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.40.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-development-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-development-zone-2",
+      "source": "10.50.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.50.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-development-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-development-zone-3",
+      "source": "10.60.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.60.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-development-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-production-zone-1",
+      "source": "10.70.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.70.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-production-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-allow-all",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-allow-all",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-production-zone-2",
+      "source": "10.80.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.80.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-production-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-production-zone-3",
+      "source": "10.90.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.90.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-production-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    }
+  ],
+  "production" :   [
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "roks-create-worker-nodes-inbound",
+      "source": "161.26.0.0/16",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "161.26.0.0/16",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "roks-create-worker-nodes-outbound",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "roks-nodes-to-service-inbound",
+      "source": "166.8.0.0/14",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "166.8.0.0/14",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "roks-nodes-to-service-outbound",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-app-incoming-traffic-requests",
+      "source": "0.0.0.0/0",
+      "tcp": [
+        {
+          "port_max": 65535,
+          "port_min": 1,
+          "source_port_max": 30000,
+          "source_port_min": 30000
+        }
+      ],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-app-outgoing-traffic-requests",
+      "source": "0.0.0.0/0",
+      "tcp": [
+        {
+          "port_max": 32767,
+          "port_min": 30000,
+          "source_port_max": 1,
+          "source_port_min": 1
+        }
+      ],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-lb-incoming-traffic-requests",
+      "source": "0.0.0.0/0",
+      "tcp": [
+        {
+          "port_max": 443,
+          "port_min": 443,
+          "source_port_max": 1,
+          "source_port_min": 1
+        }
+      ],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-lb-outgoing-traffic-requests",
+      "source": "0.0.0.0/0",
+      "tcp": [
+        {
+          "port_max": 65535,
+          "port_min": 1,
+          "source_port_max": 443,
+          "source_port_min": 443
+        }
+      ],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-1",
+      "source": "10.10.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.10.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-2",
+      "source": "10.20.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.20.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-management-zone-3",
+      "source": "10.30.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.30.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-management-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-production-zone-1",
+      "source": "10.70.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.70.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-production-zone-1",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-allow-all",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-allow-all",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-production-zone-2",
+      "source": "10.80.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.80.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-production-zone-2",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "0.0.0.0/0",
+      "direction": "inbound",
+      "icmp": [],
+      "name": "allow-inbound-ez-multitier-production-zone-3",
+      "source": "10.90.10.0/24",
+      "tcp": [],
+      "udp": []
+    },
+    {
+      "action": "allow",
+      "destination": "10.90.10.0/24",
+      "direction": "outbound",
+      "icmp": [],
+      "name": "allow-outbound-ez-multitier-production-zone-3",
+      "source": "0.0.0.0/0",
+      "tcp": [],
+      "udp": []
+    }
+  ]
+}

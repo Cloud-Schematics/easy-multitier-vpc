@@ -1,4 +1,4 @@
-# Easy Multitier VPC
+# Easy Multitier VPC (Version 2)
 
 This template allows users to easily create a VPC with three tiers, each tier having one subnet in each of three zones with very few inputs needed by the user to quikly start testing on IBM Cloud. 
 
