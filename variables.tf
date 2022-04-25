@@ -2,6 +2,12 @@
 # Account Variables
 ##############################################################################
 
+variable "TF_VERSION" {
+  default     = "1.0"
+  type        = string
+  description = "The version of the Terraform engine that's used in the Schematics workspace."
+}
+
 variable "prefix" {
   description = "A unique identifier for resources. Must begin with a letter. This prefix will be prepended to any resources provisioned by this template."
   type        = string

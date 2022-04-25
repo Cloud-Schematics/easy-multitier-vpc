@@ -20,7 +20,6 @@ The defaults of this module can be [overridden](#overriding-variables) with JSON
 
 Name                    | Type         | Description                                                                                                                               | Sensitive | Default
 ----------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------
-ibmcloud_api_key        | string       | The IBM Cloud platform API key needed to deploy IAM enabled resources.                                                                    | true      | 
 prefix                  | string       | A unique identifier for resources. Must begin with a letter. This prefix will be prepended to any resources provisioned by this template. |           | `ez-multizone`
 region                  | string       | Region where VPC will be created. To find your VPC region, use `ibmcloud is regions` command to find available regions.                   |           | `us-south`
 resource_group          | string       | Name of existing resource group where all infrastructure will be provisioned                                                              |           | `asset-development`
