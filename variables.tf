@@ -2,12 +2,6 @@
 # Account Variables
 ##############################################################################
 
-variable "ibmcloud_api_key" {
-  description = "The IBM Cloud platform API key needed to deploy IAM enabled resources."
-  type        = string
-  sensitive   = true
-}
-
 variable "prefix" {
   description = "A unique identifier for resources. Must begin with a letter. This prefix will be prepended to any resources provisioned by this template."
   type        = string
